@@ -1,9 +1,9 @@
 ﻿using Renci.SshNet;
 using changepassword;
 string host = "192.168.1.107";
-string username = "ssh";
+string username = "ssh-test";
 var currentPassword = "123456789";
-string newPassword = "12345678";
+string newPassword = "123456789";
 var port = 22;
 
 Console.WriteLine("Changing SSH Password just started");
@@ -16,8 +16,9 @@ try
     Console.WriteLine("Changing SSH Password finished");
 
 }
-catch (Exception ex)
+catch (Exception)
 {
-    Console.WriteLine("An error is occured. Detail", ex.Message);
+    Console.WriteLine("An error is occured");
+    throw;
 }
 
